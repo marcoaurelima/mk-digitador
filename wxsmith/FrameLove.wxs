@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="FrameLove">
+		<centered>1</centered>
+		<size>720,720</size>
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<handler function="OnKeyDown" entry="EVT_KEY_DOWN" />
+		<handler function="OnChar" entry="EVT_CHAR" />
+		<handler function="OnLeftDown" entry="EVT_LEFT_DOWN" />
+		<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
+			<pos>320,280</pos>
+			<size>1366,496</size>
+			<handler function="OnPanel1Paint" entry="EVT_PAINT" />
+			<handler function="OnPanel1KeyDown" entry="EVT_KEY_DOWN" />
+			<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+				<label>Label</label>
+				<pos>0,0</pos>
+				<font>
+					<size>7</size>
+					<style>normal</style>
+					<weight>normal</weight>
+					<underlined>0</underlined>
+					<family>modern</family>
+					<face>Consolas</face>
+				</font>
+			</object>
+		</object>
+	</object>
+</wxsmith>

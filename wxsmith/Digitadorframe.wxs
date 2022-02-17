@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="DigitadorFrame">
+		<centered>1</centered>
+		<size>530,420</size>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX</style>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<handler function="OnKeyUp" entry="EVT_KEY_UP" />
+		<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
+			<pos>144,280</pos>
+			<size>532,424</size>
+			<handler function="OnPanel1Paint" entry="EVT_PAINT" />
+			<handler function="OnPanel1KeyUp" entry="EVT_KEY_UP" />
+			<object class="wxRichTextCtrl" name="ID_RICHTEXTCTRL1" variable="RichTextCtrl1" member="yes">
+				<font>
+					<size>8</size>
+					<style>normal</style>
+					<weight>normal</weight>
+					<underlined>0</underlined>
+					<family>modern</family>
+					<face>Consolas</face>
+				</font>
+				<pos>24,72</pos>
+				<size>480,232</size>
+				<handler function="OnRichTextCtrl1TextEnter" entry="EVT_TEXT_ENTER" />
+				<handler function="OnRichTextCtrl1RichTextContentInserted" entry="EVT_RICHTEXT_CONTENT_INSERTED" />
+			</object>
+			<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+				<label>Iniciar</label>
+				<pos>392,324</pos>
+				<size>96,32</size>
+				<handler function="OnButton1Click" entry="EVT_BUTTON" />
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+				<label>MK Digitador</label>
+				<pos>176,18</pos>
+				<size>56,16</size>
+				<fg>#56608B</fg>
+				<font>
+					<size>18</size>
+					<style>normal</style>
+					<weight>bold</weight>
+					<underlined>0</underlined>
+					<family>modern</family>
+					<face>Courier New</face>
+				</font>
+			</object>
+			<object class="wxSpinCtrl" name="ID_SPINCTRL1" variable="SpinCtrl1" member="yes">
+				<value>200</value>
+				<min>1</min>
+				<max>1000</max>
+				<pos>112,328</pos>
+				<size>58,23</size>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+				<label>Velocidade</label>
+				<pos>40,325</pos>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+				<label>de Escrita</label>
+				<pos>48,340</pos>
+			</object>
+			<object class="wxSpinCtrl" name="ID_SPINCTRL2" variable="SpinCtrl2" member="yes">
+				<value>10</value>
+				<min>5</min>
+				<max>600</max>
+				<pos>256,328</pos>
+				<size>50,23</size>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+				<label>Esperar</label>
+				<pos>208,332</pos>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+				<label>seg</label>
+				<pos>312,332</pos>
+			</object>
+			<object class="wxStaticLine" name="ID_STATICLINE1" variable="StaticLine1" member="yes">
+				<pos>32,368</pos>
+				<size>460,2</size>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+				<label>bymarcosoftware@outlook.com</label>
+				<pos>320,376</pos>
+				<fg>wxSYS_COLOUR_APPWORKSPACE</fg>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+				<label>v1.5</label>
+				<pos>368,26</pos>
+				<fg>wxSYS_COLOUR_APPWORKSPACE</fg>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT8" variable="StaticText8" member="yes">
+				<label>Cole seu texto aqui...</label>
+				<pos>24,54</pos>
+			</object>
+			<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
+				<label>Limpar</label>
+				<pos>448,48</pos>
+				<size>56,20</size>
+				<handler function="OnButton2Click1" entry="EVT_BUTTON" />
+			</object>
+			<object class="wxGauge" name="ID_GAUGE1" variable="Gauge1" member="yes">
+				<value>90</value>
+				<pos>24,308</pos>
+				<size>480,3</size>
+				<hidden>1</hidden>
+			</object>
+		</object>
+	</object>
+</wxsmith>

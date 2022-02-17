@@ -1,0 +1,4 @@
+//aaaa ICON "wx/msw/std.ico"
+aaaa ICON "C:/Users/marco/Desktop/Projetos/Digitador/icon.ico"
+
+#include "wx/msw/wx.rc"
