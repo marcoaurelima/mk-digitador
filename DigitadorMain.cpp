@@ -11,8 +11,6 @@
 #include <wx/msgdlg.h>
 
 #include "mrcwin.h"
-#include "FrameLove.h"
-
 
 //(*InternalHeaders(DigitadorFrame)
 #include <wx/font.h>
@@ -112,7 +110,6 @@ DigitadorFrame::DigitadorFrame(wxWindow* parent,wxWindowID id)
     Gauge1->Hide();
     Center();
 
-    Connect(ID_RICHTEXTCTRL1,wxEVT_COMMAND_RICHTEXT_CONTENT_INSERTED,(wxObjectEventFunction)&DigitadorFrame::OnRichTextCtrl1RichTextContentInserted);
     Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&DigitadorFrame::OnButton1Click);
     Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&DigitadorFrame::OnButton2Click1);
     Panel1->Connect(wxEVT_PAINT,(wxObjectEventFunction)&DigitadorFrame::OnPanel1Paint,0,this);
@@ -159,24 +156,9 @@ void DigitadorFrame::OnButton1Click(wxCommandEvent& event)
 
 void DigitadorFrame::OnButton2Click(wxCommandEvent& event)
 {
-    FrameLove *f = new FrameLove(this);
-    f->Show();
-
     event.Skip();
 }
 
-
-void DigitadorFrame::OnRichTextCtrl1RichTextContentInserted(wxRichTextEvent& event)
-{
-    std::string easterEgg = RichTextCtrl1->GetValue().ToStdString();
-    if(!easterEgg.compare("MARCOAURELIOERICARLALOVE")){
-        FrameLove *f = new FrameLove(this);
-        f->Show();
-
-        RichTextCtrl1->SetValue("");
-        event.Skip();
-    }
-}
 
 void DigitadorFrame::OnClose(wxCloseEvent& event)
 {

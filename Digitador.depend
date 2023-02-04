@@ -2325,11 +2325,10 @@
 	<wx/statline.h>
 	<wx/stattext.h>
 
-1675541959 source:c:\users\marco\projetos\mk-digitador\digitadormain.cpp
+1675544699 source:c:\users\marco\projetos\mk-digitador\digitadormain.cpp
 	"DigitadorMain.h"
 	<wx/msgdlg.h>
 	"mrcwin.h"
-	"FrameLove.h"
 	<wx/font.h>
 	<wx/intl.h>
 	<wx/settings.h>
