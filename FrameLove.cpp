@@ -31,9 +31,6 @@ FrameLove::FrameLove(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxS
 	Panel1->Connect(wxEVT_PAINT,(wxObjectEventFunction)&FrameLove::OnPanel1Paint,0,this);
 	Panel1->Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&FrameLove::OnPanel1KeyDown,0,this);
 	Connect(wxID_ANY,wxEVT_CLOSE_WINDOW,(wxObjectEventFunction)&FrameLove::OnClose);
-	Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&FrameLove::OnKeyDown);
-	Connect(wxEVT_CHAR,(wxObjectEventFunction)&FrameLove::OnChar);
-	Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&FrameLove::OnLeftDown);
 	//*)
 }
 
@@ -130,22 +127,9 @@ ss <<
     StaticText1->SetLabel(ss.str());
 }
 
-
-void FrameLove::OnKeyDown(wxKeyEvent& event)
-{
-}
-
 void FrameLove::OnClose(wxCloseEvent& event)
 {
     event.Skip(true);
-}
-
-void FrameLove::OnLeftDown(wxMouseEvent& event)
-{
-}
-
-void FrameLove::OnChar(wxKeyEvent& event)
-{
 }
 
 void FrameLove::OnPanel1KeyDown(wxKeyEvent& event)

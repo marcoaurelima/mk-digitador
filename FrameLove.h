@@ -30,10 +30,7 @@ class FrameLove: public wxFrame
 
 		//(*Handlers(FrameLove)
 		void OnPanel1Paint(wxPaintEvent& event);
-		void OnKeyDown(wxKeyEvent& event);
 		void OnClose(wxCloseEvent& event);
-		void OnLeftDown(wxMouseEvent& event);
-		void OnChar(wxKeyEvent& event);
 		void OnPanel1KeyDown(wxKeyEvent& event);
 		//*)
 

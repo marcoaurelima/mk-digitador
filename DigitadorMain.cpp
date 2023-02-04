@@ -112,14 +112,11 @@ DigitadorFrame::DigitadorFrame(wxWindow* parent,wxWindowID id)
     Gauge1->Hide();
     Center();
 
-    Connect(ID_RICHTEXTCTRL1,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&DigitadorFrame::OnRichTextCtrl1TextEnter);
     Connect(ID_RICHTEXTCTRL1,wxEVT_COMMAND_RICHTEXT_CONTENT_INSERTED,(wxObjectEventFunction)&DigitadorFrame::OnRichTextCtrl1RichTextContentInserted);
     Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&DigitadorFrame::OnButton1Click);
     Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&DigitadorFrame::OnButton2Click1);
     Panel1->Connect(wxEVT_PAINT,(wxObjectEventFunction)&DigitadorFrame::OnPanel1Paint,0,this);
-    Panel1->Connect(wxEVT_KEY_UP,(wxObjectEventFunction)&DigitadorFrame::OnPanel1KeyUp,0,this);
     Connect(wxID_ANY,wxEVT_CLOSE_WINDOW,(wxObjectEventFunction)&DigitadorFrame::OnClose);
-    Connect(wxEVT_KEY_UP,(wxObjectEventFunction)&DigitadorFrame::OnKeyUp);
     //*)
 }
 
@@ -168,14 +165,6 @@ void DigitadorFrame::OnButton2Click(wxCommandEvent& event)
     event.Skip();
 }
 
-void DigitadorFrame::OnPanel1KeyUp(wxKeyEvent& event)
-{
-}
-
-void DigitadorFrame::OnRichTextCtrl1TextEnter(wxCommandEvent& event)
-{
-
-}
 
 void DigitadorFrame::OnRichTextCtrl1RichTextContentInserted(wxRichTextEvent& event)
 {
@@ -192,10 +181,6 @@ void DigitadorFrame::OnRichTextCtrl1RichTextContentInserted(wxRichTextEvent& eve
 void DigitadorFrame::OnClose(wxCloseEvent& event)
 {
     event.Skip(true);
-}
-
-void DigitadorFrame::OnKeyUp(wxKeyEvent& event)
-{
 }
 
 void DigitadorFrame::OnPanel1Paint(wxPaintEvent& event)
