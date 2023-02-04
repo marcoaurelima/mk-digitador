@@ -2325,7 +2325,7 @@
 	<wx/statline.h>
 	<wx/stattext.h>
 
-1675537152 source:c:\users\marco\projetos\mk-digitador\digitadormain.cpp
+1675539209 source:c:\users\marco\projetos\mk-digitador\digitadormain.cpp
 	"DigitadorMain.h"
 	<wx/msgdlg.h>
 	"mrcwin.h"
@@ -2335,7 +2335,7 @@
 	<wx/settings.h>
 	<wx/string.h>
 
-1675537152 c:\users\marco\projetos\mk-digitador\mrcwin.h
+1675540914 c:\users\marco\projetos\mk-digitador\mrcwin.h
 	<windows.h>
 	<cwchar>
 	<vector>
@@ -2347,7 +2347,7 @@
 	<wx/panel.h>
 	<wx/stattext.h>
 
-1675537152 source:c:\users\marco\projetos\mk-digitador\framelove.cpp
+1675539256 source:c:\users\marco\projetos\mk-digitador\framelove.cpp
 	"FrameLove.h"
 	<sstream>
 	<wx/font.h>

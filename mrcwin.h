@@ -2,7 +2,8 @@
  /* -------------------------------------------------------------------------------------- *                                                                                     *
   *                                  mrcwin.h                                              *
   *                          Autor: Marco Aurélio Lima                                     *
-  *                            Ver. 1.4   22-02-2020                                       *                                                           *
+  *                            Ver. 1.4   22-02-2020                                       *
+  *                      https://github.com/marcoaurelima                                  *                      *
   * -------------------------------------------------------------------------------------- */
 
 #ifndef MRCWIN_H_INCLUDED
@@ -137,7 +138,6 @@ namespace mrcwin{
                     words.push_back(ss.str());
                     ss.str("");
                 }
-
             }
 
             /* Percorrendo todas as palavras; as que tem uma barra "/" são botões especiais ex.: F1, Enter, Shift, etc. */
@@ -163,27 +163,24 @@ namespace mrcwin{
                     if(!words[i].compare("/left"))     {keyPress(0x25);} else
                     if(!words[i].compare("/right"))    {keyPress(0x27);} else
                     if(!words[i].compare("/windows"))  {keyPress(0x5B);} else
-
-                    if(!words[i].compare("/["))    {keyPress(0xDD);} else
-                    if(!words[i].compare("/]"))  {keyPress(0xDC);} else
-                    if(!words[i].compare("/´")){keyPress(0xDB);} else
-                    if(!words[i].compare("/~")){keyPress(0xDE);} else
-
-                    if(!words[i].compare("/!")){keyPress2bt(0x10 , 0x31);} else
-                    if(!words[i].compare("/@")){keyPress2bt(0x10 , 0x32);} else
-                    if(!words[i].compare("/#")){keyPress2bt(0x10 , 0x33);} else
-                    if(!words[i].compare("/$")){keyPress2bt(0x10 , 0x34);} else
-                    if(!words[i].compare("/%")){keyPress2bt(0x10 , 0x35);} else
-                    if(!words[i].compare("/&")){keyPress2bt(0x10 , 0x37);} else
-                    if(!words[i].compare("/(")){keyPress2bt(0x10 , 0x39);} else
-                    if(!words[i].compare("/)")){keyPress2bt(0x10 , 0x30);} else
-                    if(!words[i].compare("/_")){keyPress2bt(0x10 , 0xBD);} else
-                    if(!words[i].compare("/:")){keyPress2bt(0x10 , 0xBF);} else
-                    if(!words[i].compare("/{")){keyPress2bt(0xA0, 0xDD);} else
-                    if(!words[i].compare("/}")){keyPress2bt(0xA0, 0xDC);} else
-
-                    if(!words[i].compare("/\\")){keyPress(0xE2);} else
-                    if(!words[i].compare("/|")){keyPress2bt(0xA0, 0xE2);} else
+                    if(!words[i].compare("/["))        {keyPress(0xDD);} else
+                    if(!words[i].compare("/]"))        {keyPress(0xDC);} else
+                    if(!words[i].compare("/´"))        {keyPress(0xDB);} else
+                    if(!words[i].compare("/~"))        {keyPress(0xDE);} else
+                    if(!words[i].compare("/\\"))       {keyPress(0xE2);} else
+                    if(!words[i].compare("/!"))        {keyPress2bt(0x10, 0x31);} else
+                    if(!words[i].compare("/@"))        {keyPress2bt(0x10, 0x32);} else
+                    if(!words[i].compare("/#"))        {keyPress2bt(0x10, 0x33);} else
+                    if(!words[i].compare("/$"))        {keyPress2bt(0x10, 0x34);} else
+                    if(!words[i].compare("/%"))        {keyPress2bt(0x10, 0x35);} else
+                    if(!words[i].compare("/&"))        {keyPress2bt(0x10, 0x37);} else
+                    if(!words[i].compare("/("))        {keyPress2bt(0x10, 0x39);} else
+                    if(!words[i].compare("/)"))        {keyPress2bt(0x10, 0x30);} else
+                    if(!words[i].compare("/_"))        {keyPress2bt(0x10, 0xBD);} else
+                    if(!words[i].compare("/:"))        {keyPress2bt(0x10, 0xBF);} else
+                    if(!words[i].compare("/{"))        {keyPress2bt(0xA0, 0xDD);} else
+                    if(!words[i].compare("/}"))        {keyPress2bt(0xA0, 0xDC);} else
+                    if(!words[i].compare("/|"))        {keyPress2bt(0xA0, 0xE2);} else
 
                     if(!words[i].compare("/`")){keyPress2bt(0xA0, 0xDB);} else
                     if(!words[i].compare("/^")){keyPress2bt(0xA0, 0xDE);} else
@@ -240,7 +237,6 @@ namespace mrcwin{
                     }
 
                     wxMilliSleep(delay);
-                     //Sleep(delay);
 
                 } else {
                     /* Teclas digitaveis por strings */
@@ -248,11 +244,9 @@ namespace mrcwin{
                         if(words[i][j] == 'Ç'){
                             keyPress(0xBA);
                             wxMilliSleep(delay);
-                            //Sleep(delay);
                         } else {
                             keyPress(words[i][j]);
                             wxMilliSleep(delay);
-                            //Sleep(delay);
                         }
                     }
                 }
@@ -262,9 +256,7 @@ namespace mrcwin{
         /// converte um caractere em uma string correspondente na linguagem do mrcwin
         /// EX.: se o caractere for 'Á', a seuqnecia é: caps > acento circunflexo > A > caps
         std::string convertChar(char c){
-            if(c == ' '){ return " / "; } else
-            if(c == '\t'){ return " /tab "; }  else
-            if(c == '\n'){ return " /enter "; } else
+            if(c == ' '){ return " / "; }  else
             if(c == '!'){ return " /! "; } else
             if(c == '@'){ return " /@ "; } else
             if(c == '#'){ return " /# "; } else
@@ -275,13 +267,14 @@ namespace mrcwin{
             if(c == ')'){ return " /) "; } else
             if(c == '_'){ return " /_ "; } else
             if(c == ':'){ return " /: "; } else
-
+            if(c == '\t'){ return " /tab "; }   else
+            if(c == '\n'){ return " /enter "; } else
 
             if(c == '\\'){ return " /\\ "; } else
-            if(c == '|'){ return " /| "; } else
+            if(c == '|'){ return " /| "; }   else
 
             if(c == '\"'){ return " /aspas "; } else
-            if(c == '\''){ return " /' "; } else
+            if(c == '\''){ return " /' "; }     else
 
             if(c == '?'){ return " /? "; } else
             if(c == ','){ return " /, "; } else
@@ -348,8 +341,6 @@ namespace mrcwin{
 
             /// SE CHEGOU AQUI, ELE TEM QUE SER ALFANUMERICO, PQ OS SIMBOLOS
             /// POSSIVEIS JÁ FORAMCHECADOS. SE NÃO FOR ALFANUMERICO, VAI RETORNAR.
-            /// fiz essa alteração depois que ele teve um compotamento estranho depois
-            /// de digitado. acho que pode resolver - 30-10-2020
             if(!isalnum(c)){
                 return "";
             }
@@ -468,7 +459,6 @@ namespace mrcwin{
             scrBuffer.dwSize.X = bufferSize;
 
             SetConsoleScreenBufferSize(handler, scrBuffer.dwSize);
-
         }
 
         /// Muda a quantidade de colunas maxima permitido no eixo Y ( coluna ).
@@ -481,7 +471,6 @@ namespace mrcwin{
             scrBuffer.dwSize.Y = bufferSize;
 
             SetConsoleScreenBufferSize(handler, scrBuffer.dwSize);
-
         }
 
         /// Muda a quantidade de caracteres e colunas maxima permitido respectivamente.
@@ -495,7 +484,6 @@ namespace mrcwin{
             scrBuffer.dwSize.Y = bufferSizeY;
 
             SetConsoleScreenBufferSize(handler, scrBuffer.dwSize);
-
         }
 
         /// Muda o estilo do console para FULLSCREEN
@@ -521,10 +509,8 @@ namespace mrcwin{
         /// Muda a cor das letras mostradas na janela de Console. Use as constantes (ex.: mrcwin::prompt::COLOR_RED) definidas ou tipos inteiros.
         /// As cores mudarão sempre que essa função for chamada. Isso significa que é possivel colorir separadamente cada letra.
         void changeFontColor(int code){
-
             HANDLE handler = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(handler, code);
-
         }
 
         /// Muda o tamanho da fonte da janela de Console.
@@ -541,9 +527,7 @@ namespace mrcwin{
             if(bold){ fontInfo.FontWeight = FW_BOLD; }
             else    { fontInfo.FontWeight = FW_NORMAL;}
 
-
             HANDLE handler = GetStdHandle(STD_OUTPUT_HANDLE);
-
             SetCurrentConsoleFontEx(handler, false, &fontInfo);
         }
 
