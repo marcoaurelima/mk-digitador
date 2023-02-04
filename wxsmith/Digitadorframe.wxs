@@ -14,7 +14,7 @@
 			<handler function="OnPanel1KeyUp" entry="EVT_KEY_UP" />
 			<object class="wxRichTextCtrl" name="ID_RICHTEXTCTRL1" variable="RichTextCtrl1" member="yes">
 				<font>
-					<size>8</size>
+					<size>16</size>
 					<style>normal</style>
 					<weight>normal</weight>
 					<underlined>0</underlined>

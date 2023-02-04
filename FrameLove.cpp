@@ -49,90 +49,6 @@ void FrameLove::OnPanel1Paint(wxPaintEvent& event)
     this->SetIcon( wxICON(aaaa) );
 
     std::stringstream ss;
-
-/*
-
-ss <<
-":....................-:+syddddddddyo/-./shdddddddddddddhhhhhhhhhhhhhhhhhhhhhyyyyyyyyyyyyyyyyyssssssssssssssooooooo/  -.`   ```                        \n" <<
-".................-/oyhddddddddyo:...../dddddddddddddhhhhhhhhhhhhhhhhhhhhhhhhyyyyyyyyyyyyyyysyssssssssssssssssooooo:  `                                \n" <<
-".............:+syddddddddys+:.....----oddddddddddddddddhhhhhhhhhhhhhhhhhhhhhyyyyyyyyyyyyyyyssssssssssssssssssooooo.``                                 \n" <<
-"........-/oshdmmmmmmdyo/-...-------./ohddddddddddddddddhhhhhhhhhhhhhhhhhhhhyyyyyyyyyysosssysssosssssssssssssso+oo+.``                                 \n" <<
-"...-:+shdmmmmmmdhyo:------::----...+osddddddddddddddddhdhhhhhhhhhhhhhhhhhhhhyyyyys+:::///+sssso++osssssssssssoo+/:-.`   ```````                       \n" <<
-"/oyddmmmmmmdys+-----:::::::---.....shdddddddddddddddddhdhhhhhhhhhhhhhhhhhhhhyy++:....---:::::+ossssssssssssssoooo:.```.+++/:--`                       \n" <<
-"mmmmmmmhyo/--.------------........-yddddddddddddddddddddhhhhhhhhhhhhhhhhhhhhyy/-``````....--//osoooossssssssoooo/-.````.```` ``                       \n" <<
-"mmmhs+:--..----------.............:dddddddddddddddddddddhhhhhhhhhhhhhhhhhhhhy/.`   ```....-::::-..--+sssssosoooo+-.  `..`     `                       \n" <<
-"ho:-..---::---.--.................:dddddddddddddddddddddhhhhhhhhhhhhhhhhhyso/.`       ````....``` ``-::/+++o//oo+-`    `.`                            \n" <<
-"yyso/------......................:+dddddddddddddddddddddhhhhhhhhhhhhhysoo:...             ``         ``..-:/+///+/-                  ``               \n" <<
-"ymmmy/-........................`.:sdddddddddddddddddddddhhhhhhhsosoo+::/:.``                            ```.-://+o/.                 .:               \n" <<
-"ossh:-..`................``..`..-:odddddddddddddddddddddhhhhhhs:::.......`                                 `....---.`                `:.              \n" <<
-"/:--+-.``.................``...-:/ohddddddddddddddddddddhhhhho/-.```````                                     ```.....`             `` `-.             \n" <<
-"-...-/-................`.`.....:/sydddddddddddddddddddddhhhhs/-.`````                                           `.---..```  ``````--`   ``            \n" <<
-"-...../:........```.`..`..-:///::oddddddddddddddddddddhhhhhy+-..``                                               `-:..--...``.///++:`     `           \n" <<
-".......::............-:/osssso//:oddddddddddddddddddddhhhhho/-.```  ` ````                                        `----/:-:.``.://:.                  \n" <<
-"/-......:+-.....--/oyhddddddddddddddddddddddddddddddhddhhhh+:..``````````            `.-//-.````````              ``..:++/:--.`````                   \n" <<
-"os-......:o:-:+oyhdddddddddddddddddddddddddddddddddddhhhhhs/-....````````        `.:/osyyo/:--....``               ``..:/o++/-..``                    \n" <<
-"/++/-...--:oohddddddddddddddddddddddddddddddddddddddhddhhho/---....``````      `-+syyyyss+:-......``                ``.-:+++++/:.```                  \n" <<
-"-:+ds/:--:+yddddddddddddddddddddddddddddddddddddddhhhhhhhyo/::---...````    ``-+syyyss+:-...---..```                 ``.-:/+++++:--.`                 \n" <<
-"--+y/-`./yddddddddddddddddddddddddddddddddddddddddhhhhhhhyo+/::---...```  ``-+syyyyo:-....-/:..`````                 ```.-///++++/+:.`                \n" <<
-"-:-.``:sddddddddddddddddddddddddddhsosyhddddhdddddhdhhhhhhyso+/:--...`````-/yyyyyyo:-:/:-:os-....``                  ```...-:/++++++/:.`            ``\n" <<
-"`   .oddddddddddddddddddddddddddhh+:.--:/++++oyhhhhhhhhhhhhhyso/:-....```/syyyyyyyo+o+++ssso/:-```                  ``.----.-:/+++++++:`              \n" <<
-"   .sdddddddddddddddddddddddddddo:-.```````....-:+shhhhhhhhhhho/:-.....-+yyyyyyyyyyysssysssss+.```                 `.-/+///-.-/++/++++/``             \n" <<
-"  -yddddddddddddddddddddddddhhyo:..``````````````.-:/oyhhhhhhho//:-...-oyyyyyyyyyyyyyyyyssss/-..```               ``..-:/++--/+++/++++/.`             \n" <<
-" -hddddddddddddddddddddddddy+:-.`               ```.-:/+yhhhhhyo//:---:syyyyyyysssssyysssso/...```               ```.`.-::--/+++++++++/-```           \n" <<
-".hddddddddddddddddddddddhs/-.`                    ````.-:oyhhhhyssoo+++syyyyo/-.```-+oo++:.`````                ```.-``.````.:/+++++++/.```           \n" <<
-"yddddddddddddddddddddddh+.`                         `````.:shhhhhhyyyyyyyys/.`      ```````````                  ```.`.:```.:+++++++++/.````          \n" <<
-"dddddddddddddddddddddyo:`                                ``-+yhhhhyyyyyyyyyo.             ``````                 ``.......-:++++++++++:...```         \n" <<
-"dddddddddddddddddddh+-``                                   ``:oyyyyyyyyyyyyy:`           ``...`````             ``.:--::/:///++++++++/:...````        \n" <<
-"dddddddddddddddddhs:.`                                    `.--/syyyyyyyyyyyyo`             `.--..`````          ``.--/:--..-:+++++++///--.```         \n" <<
-"dddddddddddddddh/-`                                    `-+o/:-:/+o/oyyyyyyyyy/`             `....-...```````` ```.-:////://+++++++////---.```         \n" <<
-"dddddddddddddddo.`                                   `-oyo-````.-//::+syyyyyys.              .`````...````````````-:++++++++++++++/////-.```          \n" <<
-"ddddddddddddddd/.`                                  .oyy:` ``.:+++/-..:oyyyyyy+            `--`````..--.....`````.-///+++++++++++/////:..```          \n" <<
-"ddddddddddddhhd+.``                               `:yyo.  ./syyyyy:.```-+syysso`        `-/+/```.://+oo+++//::....-:-:/+++++++++//////.````           \n" <<
-"hhdhhhhhhhhhhhhy-```                             `-+o+.`:syyy+yys+.`  ``-/sssos:      `/sss:-::/oooooooooooooo++///+//+++++++++//////-`````           \n" <<
-"hhhhhhhhhhhhhhhy:.````                           `-/:-:syyyyy++-..`    ``.:sssso.`   `:osssosoooo//ooooooooooo+++++++++++++++++/////:`````            \n" <<
-"hhhhhhhhhhhhhhhh+-..```                         ``-::/yysyo:--..``      ``.:sssso+//++ossoooooo/--/o+:--..-:/+++++++++++++++/++/////.`````            \n" <<
-"hhhhhhhhhhhhhhhhs:--.```                         ``.--/+-.`````           `-/ssssssssssssooo////+o+-```` ````.+++++++++++++/+//////-``````            \n" <<
-"hhhhhhhhhhhhhhhhho-..```            ````````      ``.`                     `-sssssssssssso++oooo+-```.``````.-+++++++++++++///////-``````             \n" <<
-"hhhhhhhhhhhhhhhhhh+-```         `.:/ooo+/:-.`       ``                     `.+sssssssssooooooo+-.....--....-:+++++++++++++////////-````````````````   \n" <<
-"hhhhhhhhhhhhhhhhhhy/-.``    `./osyyysssoo+/-.`                            ``.+ssssssosoooooooo+::://++o+:-:++++++++++++///////////:-..``....````````` \n" <<
-"hhhhhhhhhhhhhhhhhhhy+-.```./sso+/-.-:+oo+/-..``                      ``  ``.:ossssssoooooooooooooooooo+++++++++++++++++////////////::::://::--........\n" <<
-"hhhhhhhhhhhhhhhhhhhhys:..+so:``` ./sysoss+.  ```             ````.........-://++ooooooooooooooooooooo++++++++++++++++++///////////////::----::::::::::\n" <<
-"hhhhhhhhhhhhhhhhhyyyyys+os-````:oyyyy/::.``                 `  `````.--:///::--/+oooooooooooooooooo+++++++++++++++++++/////////////:-.```..-::::::::::\n" <<
-"yysyyyyyyyyyyyyyyyyyyyyyy+-.-:oyyyyyo:-```                           ``.-:-.`..:+oooooooooooooooo+++++++++++++++++++/////////////::---:::::/::::::::::\n" <<
-"yyosyyyyyyyyyyyyyyyyyyyyysoosyyyyyyo:````                       `-    `.//.``..-+oooooooooooooo+++++++++++++++++++/////////////////////////:::::::::::\n" <<
-":yyyyyyyyyyyyyyyyyyyyyyyyyyyysooo/-.```          ````         `.+:    `//.````.-+oooooooooooooo++++++++++++++++/+///////////////////////::::::::::::::\n" <<
-"`+yyyyyyyyyyyyyyyyyyyyyyyyyy/.````              ``` ``        .oo`  `.+o.`  ``.-/oooooooooooo++++++++++++++++++////////////////////////:::::::::::::::\n" <<
-" `+yysyyyyyyyyyyyyyyyyyyyyyy/`                 `..`  ```    `-+s- `.:oo:``` ```./oooooooooo++++++++++++++++++//////////////////////////:::::::::::::::\n" <<
-"  `+ys+syyyyyyyyyyyyyyyyyyyy+``                ````...-::///+os+`.:+++:..``````.+ooooooo++++++++++++++++++++////////////////////////::::::::::::::::::\n" <<
-"   ./sssyyyyyyyyyyyyyyysssss+````             ```  .:++ooooooso--//:..`...`````.+oooooo++++++++++++++++++/++///////////////////////:::::::::::::::::::\n" <<
-"    `-+syyssssssssssssssssss+.````           ```     ```...-//++/.`````--``````.+oo+++++++++++++++++++++/////////////////////////:::::::::::::::::::::\n" <<
-"     `./sssssssssssssssssssss/-.`````      `````  ```   `-:/++:.``````-:.``````-++++++++++++++++++++++///////////////////////////::::::::::::::::::::-\n" <<
-"       `:ssssssssssssssssssssso:-....```````..`````...-/+oo///.`````.-:-```  ``-+++++++++++++++++++++//////////////////////////:::::::::::::::::::::-:\n" <<
-"   ``..-:+sssssssssssssssssssssso+:---.........``./+++++:-..`````..-//-``     `:+++++++++++++++++////////////////////////////:::::::::::::::::::::-::-\n" <<
-" ``.--:::+sssssssssssssssssssssssso/------........-.`````...----:///:``       .+++++++++++++++////////////////////////////:/:::::::::::::::::::::::::-\n" <<
-"`.------:/osssssssssssssssssssssssso+:.......``````````````.......``          -+++++++++++++++////////////////////////////::::::::::::::::::::::::::--\n" <<
-"------:::+osssssssssssssssosssoosooooo+:..........``````````````             `/++++++++++++///////////////////////////://::::::::::::::::::::::::-----\n" <<
-"::--::://ossssssosssoooosooooooooooooooo++/:::------..```````              `.:++++++++++//////////////////////////////::::::::::::::::::::::-:::::----\n" <<
-"::--://+ooooooooooooooooooo+oooooooooooooooooo++//:::---..````           `.-/+++++++++//////////////////////////////:::::::::::::::::::::::::::-------\n" <<
-"::::/ooooooooooooooooooooo+ooooooooooooooooooooooo++////+//:--..``````..-//+++++++++///////////////////////////////::::::::::::::::::::::::::-:-------\n" <<
-"::/+oooooooooooooooooooooo/o+++//++oooooooooooooooooo++++++++++++/////+++++++++////////////////////////////////:::::::::::::::::::::::::-::::---------\n" <<
-"::+ooooooooooooooooooooooo+/:++///::+ooooooooo++++++++++++++++++++++++++++++++///////////////////////////////:/::::::::::::::::::::::::::-:-----------\n" <<
-"//+oooooooooooooooooooooooo/:.---://:/++o++++++++++++++++++++++++++++++++++//////.`:///////////////////////::::::::::::::::::::::::--::::-------------\n" <<
-"/+ooooooooooooooooooooooooo+:..:.-.://::+++++++++++++++++++++++++++++++////////:.` `:////////////////////::::-:::::::::::::::::::--:::----------------\n" <<
-"o+oooooooooooooooooooooo++++++++::/-`.`./+++++++++++++++++++++++++//////////:-.`    `//////////////////::::::``::::::::::::::::--:::------------------\n" <<
-"+++++++++++++++++++++++++++++++++++/::--://++++++++++++++++++++/////////////.        ./////////////:::::::::.  `:::::::::::::-::::-::-----------------\n" <<
-"++++++++++++++++++++++++++++++++++++++++++++++++++++++++////////////////////:.        ://///////::::::::::::    `:::::::::::::::-:--------------------\n" <<
-"++++++++++++++++++++++++++++++++++++++++++++++++++////////////////////////////.       `///////:::::::::::::.     .::::::::::::------------------------\n" <<
-"+++++++++++++++++++++++++++++++++++++++++++++/+////////////////////////////////-`      :///:::::::::::::::-       .:::::::::-:------------------------\n" <<
-"+++++++++++++++++++++++++++++++++++++///////////////////////////////////////////:.`    .:/::::::::::::::::`        -::::::----------------------------\n" <<
-"++++++++++++++++++++++++++++++++++///////////////////////////////////////////////:-.   `:::::::::::::::::-         `-:---:----------------------------\n" <<
-"+++++++++++++++////++//++///////////////////////////////////////////////////////::::-.  :::::::::::::::::.          `---------------------------------\n" <<
-"/////////////////////////////////////////////////////////////////////////////::::::::::.-::::::::::::::::.           `--------------------------------\n" <<
-"//////:-://////////////////////////////////////////////////////////////::::::::::::::::::::::::::::::::::`            `-------------------------------\n";
-
-
-*/
-
 ss <<
 "ysssssooosssssssssssyyyhddmmmmmmmmdhyssddmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmh-.yo:...://:.``````````````````````\n" <<
 "ssssoosssssssssssyhhdmmmmmmmmmdhyssssyhmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmy-::``   ```.:.`````````````..``````\n" <<
@@ -213,9 +129,6 @@ ss <<
 
     StaticText1->SetLabel(ss.str());
 }
-
-
-
 
 
 void FrameLove::OnKeyDown(wxKeyEvent& event)

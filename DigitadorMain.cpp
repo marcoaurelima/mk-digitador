@@ -80,7 +80,7 @@ DigitadorFrame::DigitadorFrame(wxWindow* parent,wxWindowID id)
     RichTextCtrl1 = new wxRichTextCtrl(Panel1, ID_RICHTEXTCTRL1, wxEmptyString, wxPoint(24,72), wxSize(480,232), wxRE_MULTILINE, wxDefaultValidator, _T("ID_RICHTEXTCTRL1"));
     wxRichTextAttr rchtxtAttr_1;
     rchtxtAttr_1.SetBulletStyle(wxTEXT_ATTR_BULLET_STYLE_ALIGN_LEFT);
-    wxFont Font_1(8,wxFONTFAMILY_MODERN,wxFONTSTYLE_NORMAL,wxFONTWEIGHT_NORMAL,false,_T("Consolas"),wxFONTENCODING_DEFAULT);
+    wxFont Font_1(16,wxFONTFAMILY_MODERN,wxFONTSTYLE_NORMAL,wxFONTWEIGHT_NORMAL,false,_T("Consolas"),wxFONTENCODING_DEFAULT);
     rchtxtAttr_1.SetFontFaceName(Font_1.GetFaceName());
     rchtxtAttr_1.SetFontSize(Font_1.GetPointSize());
     rchtxtAttr_1.SetFontStyle(Font_1.GetStyle());
@@ -140,20 +140,13 @@ void DigitadorFrame::OnAbout(wxCommandEvent& event)
     wxMessageBox(msg, _("Welcome to..."));
 }
 
-
-
 void DigitadorFrame::OnButton1Click(wxCommandEvent& event)
 {
-    //MessageBeep(MB_ICONQUESTION);
-
     std::string text = RichTextCtrl1->GetValue().ToStdString();
     int velocity = SpinCtrl1->GetValue();
     int wait = SpinCtrl2->GetValue();
 
     std::stringstream ss;
-    //ss << "  A digitação começará em "
-     //  << wait
-      // << " segundos.\n\n   Para interromper a digitação pressione F9.";
 
     ss << "  A digitação esperará " << wait << " segundos."
        << "\n\n   Para interromper a digitação pressione F9.";
@@ -166,8 +159,6 @@ void DigitadorFrame::OnButton1Click(wxCommandEvent& event)
     mrcwin::virtkeyboard::typeText(text, 2000/velocity);
     wxMessageBox( _("  Concluído!"), wxT("     "), wxICON_INFORMATION);
 }
-
-
 
 void DigitadorFrame::OnButton2Click(wxCommandEvent& event)
 {
@@ -186,112 +177,8 @@ void DigitadorFrame::OnRichTextCtrl1TextEnter(wxCommandEvent& event)
 
 }
 
-/// ESTA FUNÇÃO IRÁ GARANTIR QUE NENHUM CARACTERE ESTÁ FORA DO QUE ESTAO
-/// PRE-DEFINIDOS PELO PROGRAMA.
-/*
-void DigitadorFrame::conferirTexto(){
-    std::string texto = RichTextCtrl1->GetValue().ToStdString();
-
-    Gauge1->Range = texto.size();
-
-    std::stringstream ss;
-
-    for(int i=0;i<texto.size();i++){
-        if((texto[i] >= 'a' && texto[i] <= 'z') ||
-           (texto[i] >= 'A' && texto[i] <= 'Z') ||
-           (texto[i] >= '0' && texto[i] <= '9') ||
-
-           (texto[i] == 'ç') ||
-           (texto[i] == 'Ç') ||
-
-           (texto[i] == '\n') ||
-           (texto[i] == '\t') ||
-
-           (texto[i] == '"') ||
-           (texto[i] == '\'') ||
-           (texto[i] == '!') ||
-           (texto[i] == '?') ||
-           (texto[i] == '@') ||
-           (texto[i] == '#') ||
-           (texto[i] == '$') ||
-           (texto[i] == '%') ||
-           (texto[i] == '&') ||
-           (texto[i] == '*') ||
-           (texto[i] == '(') ||
-           (texto[i] == ')') ||
-           (texto[i] == '-') ||
-           (texto[i] == '_') ||
-           (texto[i] == '=') ||
-           (texto[i] == '+') ||
-           (texto[i] == '§') ||
-
-           (texto[i] == '|') ||
-           (texto[i] == '\\') ||
-           (texto[i] == ',') ||
-           (texto[i] == '<') ||
-           (texto[i] == '.') ||
-           (texto[i] == '>') ||
-           (texto[i] == '*') ||
-           (texto[i] == ';') ||
-           (texto[i] == ':') ||
-           (texto[i] == ']') ||
-           (texto[i] == '}') ||
-           (texto[i] == 'º') ||
-           (texto[i] == '[') ||
-           (texto[i] == '{') ||
-           (texto[i] == 'ª') ||
-           (texto[i] == '/') ||
-
-           (texto[i] == 'á') ||
-           (texto[i] == 'é') ||
-           (texto[i] == 'í') ||
-           (texto[i] == 'ó') ||
-           (texto[i] == 'ú') ||
-           (texto[i] == 'Á') ||
-           (texto[i] == 'É') ||
-           (texto[i] == 'Í') ||
-           (texto[i] == 'Ó') ||
-           (texto[i] == 'Ú') ||
-
-           (texto[i] == 'à') ||
-           (texto[i] == 'è') ||
-           (texto[i] == 'ì') ||
-           (texto[i] == 'ò') ||
-           (texto[i] == 'ù') ||
-           (texto[i] == 'À') ||
-           (texto[i] == 'È') ||
-           (texto[i] == 'Ì') ||
-           (texto[i] == 'Ò') ||
-           (texto[i] == 'Ù') ||
-
-           (texto[i] == 'â') ||
-           (texto[i] == 'ê') ||
-           (texto[i] == 'î') ||
-           (texto[i] == 'ô') ||
-           (texto[i] == 'û') ||
-           (texto[i] == 'Â') ||
-           (texto[i] == 'Ê') ||
-           (texto[i] == 'Î') ||
-           (texto[i] == 'Ô') ||
-           (texto[i] == 'Û') ||
-
-           (texto[i] == 'ã') ||
-           (texto[i] == 'Ã') ||
-           (texto[i] == 'õ') ||
-           (texto[i] == 'Õ')
-           ){
-            ss << texto[i];
-           }
-    }
-
-
-}
-*/
-
-
 void DigitadorFrame::OnRichTextCtrl1RichTextContentInserted(wxRichTextEvent& event)
 {
-
     std::string easterEgg = RichTextCtrl1->GetValue().ToStdString();
     if(!easterEgg.compare("MARCOAURELIOERICARLALOVE")){
         FrameLove *f = new FrameLove(this);
@@ -323,8 +210,6 @@ void DigitadorFrame::OnButton2Click1(wxCommandEvent& event)
     if(res == 2){
         this->RichTextCtrl1->Clear();
     }
-
-
 }
 
 

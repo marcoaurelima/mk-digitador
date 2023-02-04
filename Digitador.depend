@@ -2307,3 +2307,61 @@
 1604105161 source:c:\users\marco\desktop\projetos\digitador\resource.rc
 	"wx/msw/wx.rc"
 
+1675537152 source:c:\users\marco\projetos\mk-digitador\digitadorapp.cpp
+	"DigitadorApp.h"
+	"DigitadorMain.h"
+	<wx/image.h>
+
+1675537152 c:\users\marco\projetos\mk-digitador\digitadorapp.h
+	<wx/app.h>
+
+1675537152 c:\users\marco\projetos\mk-digitador\digitadormain.h
+	<wx/button.h>
+	<wx/frame.h>
+	<wx/gauge.h>
+	<wx/panel.h>
+	<wx/richtext/richtextctrl.h>
+	<wx/spinctrl.h>
+	<wx/statline.h>
+	<wx/stattext.h>
+
+1675537152 source:c:\users\marco\projetos\mk-digitador\digitadormain.cpp
+	"DigitadorMain.h"
+	<wx/msgdlg.h>
+	"mrcwin.h"
+	"FrameLove.h"
+	<wx/font.h>
+	<wx/intl.h>
+	<wx/settings.h>
+	<wx/string.h>
+
+1675537152 c:\users\marco\projetos\mk-digitador\mrcwin.h
+	<windows.h>
+	<cwchar>
+	<vector>
+	<sstream>
+	<stdio.h>
+
+1675537152 c:\users\marco\projetos\mk-digitador\framelove.h
+	<wx/frame.h>
+	<wx/panel.h>
+	<wx/stattext.h>
+
+1675537152 source:c:\users\marco\projetos\mk-digitador\framelove.cpp
+	"FrameLove.h"
+	<sstream>
+	<wx/font.h>
+	<wx/intl.h>
+	<wx/string.h>
+
+1675537152 source:c:\users\marco\projetos\mk-digitador\love.cpp
+	"love.h"
+	<wx/intl.h>
+	<wx/string.h>
+
+1675537152 c:\users\marco\projetos\mk-digitador\love.h
+	<wx/panel.h>
+
+1675537152 source:c:\users\marco\projetos\mk-digitador\resource.rc
+	"wx/msw/wx.rc"
+

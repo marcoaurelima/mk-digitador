@@ -8,15 +8,12 @@
 #ifndef MRCWIN_H_INCLUDED
 #define MRCWIN_H_INCLUDED
 
-
 //#define _WIN32_WINNT 0x0601
 #include <windows.h>
 #include <cwchar>
 #include <vector>
 #include <sstream>
 #include <stdio.h>
-
-
 
 
 /* -------------------------------------------------------------------------------------- *
@@ -44,7 +41,6 @@ lpConsoleCurrentFontEx);
 }
 #endif
 */
-
 
 
 namespace mrcwin{
@@ -118,8 +114,6 @@ namespace mrcwin{
 
             input1.ki.dwFlags = KEYEVENTF_KEYUP;
             SendInput(1,&input1,sizeof(input1));
-
-
         }
 
 
@@ -146,7 +140,6 @@ namespace mrcwin{
 
             }
 
-
             /* Percorrendo todas as palavras; as que tem uma barra "/" são botões especiais ex.: F1, Enter, Shift, etc. */
             for(size_t i=0;i<words.size();i++){
                 if(words[i][0] == '/'){
@@ -170,7 +163,6 @@ namespace mrcwin{
                     if(!words[i].compare("/left"))     {keyPress(0x25);} else
                     if(!words[i].compare("/right"))    {keyPress(0x27);} else
                     if(!words[i].compare("/windows"))  {keyPress(0x5B);} else
-
 
                     if(!words[i].compare("/["))    {keyPress(0xDD);} else
                     if(!words[i].compare("/]"))  {keyPress(0xDC);} else
@@ -266,7 +258,6 @@ namespace mrcwin{
                 }
             }
         }
-
 
         /// converte um caractere em uma string correspondente na linguagem do mrcwin
         /// EX.: se o caractere for 'Á', a seuqnecia é: caps > acento circunflexo > A > caps
@@ -373,7 +364,6 @@ namespace mrcwin{
             return ss.str();
         }
 
-
         /// converte um texto de liguagem natural em um texto na linguagem do mrcwin
         std::string convertText(std::string text){
             std::stringstream ss;
@@ -388,13 +378,7 @@ namespace mrcwin{
         void typeText(std::string text = "Este é o teste de digitação padrão.", int delay=50){
             keySequence(convertText(text), delay);
         }
-
-
-
-
     } /* Fim do namespace virtkeyboard*/
-
-
 
 
     namespace virtmouse{
@@ -452,7 +436,6 @@ namespace mrcwin{
         }
 
     } /* Fim do namespace virtkeyboard*/
-
 
 
     namespace prompt{
@@ -521,7 +504,6 @@ namespace mrcwin{
             SetConsoleDisplayMode(handler, CONSOLE_FULLSCREEN_MODE,NULL);
         }
 
-
         /// Muda o tamanho da jenela de Console e centraliza no monitor. Tamanho em PIXELS.
         void changeSize(int sizeX, int sizeY){
 
@@ -567,14 +549,6 @@ namespace mrcwin{
 
     } /* Fim namespace prompt */
 
-
-
-
-
 } /* Fim namespace mrcwin */
-
-
-
-
 
 #endif // MRCWIN_H_INCLUDED
