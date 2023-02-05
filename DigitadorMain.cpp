@@ -99,12 +99,12 @@ DigitadorFrame::DigitadorFrame(wxWindow* parent,wxWindowID id)
     StaticText4 = new wxStaticText(Panel1, ID_STATICTEXT4, _("Esperar"), wxPoint(208,332), wxDefaultSize, 0, _T("ID_STATICTEXT4"));
     StaticText5 = new wxStaticText(Panel1, ID_STATICTEXT5, _("seg"), wxPoint(312,332), wxDefaultSize, 0, _T("ID_STATICTEXT5"));
     StaticLine1 = new wxStaticLine(Panel1, ID_STATICLINE1, wxPoint(32,368), wxSize(460,2), wxLI_HORIZONTAL, _T("ID_STATICLINE1"));
-    StaticText7 = new wxStaticText(Panel1, ID_STATICTEXT7, _("bymarcosoftware@outlook.com"), wxPoint(320,376), wxDefaultSize, 0, _T("ID_STATICTEXT7"));
-    StaticText7->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_APPWORKSPACE));
+    StaticText7 = new wxStaticText(Panel1, ID_STATICTEXT7, _("https://github.com/marcoaurelima"), wxPoint(304,376), wxDefaultSize, 0, _T("ID_STATICTEXT7"));
+    StaticText7->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHT));
     StaticText6 = new wxStaticText(Panel1, ID_STATICTEXT6, _("v1.5"), wxPoint(368,26), wxDefaultSize, 0, _T("ID_STATICTEXT6"));
     StaticText6->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_APPWORKSPACE));
     StaticText8 = new wxStaticText(Panel1, ID_STATICTEXT8, _("Cole seu texto aqui..."), wxPoint(24,54), wxDefaultSize, 0, _T("ID_STATICTEXT8"));
-    Button2 = new wxButton(Panel1, ID_BUTTON2, _("Limpar"), wxPoint(448,48), wxSize(56,20), 0, wxDefaultValidator, _T("ID_BUTTON2"));
+    Button2 = new wxButton(Panel1, ID_BUTTON2, _("Limpar"), wxPoint(448,44), wxSize(56,24), 0, wxDefaultValidator, _T("ID_BUTTON2"));
     Gauge1 = new wxGauge(Panel1, ID_GAUGE1, 100, wxPoint(24,308), wxSize(480,3), 0, wxDefaultValidator, _T("ID_GAUGE1"));
     Gauge1->SetValue(90);
     Gauge1->Hide();

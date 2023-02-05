@@ -66,21 +66,17 @@
 		<Unit filename="DigitadorApp.h" />
 		<Unit filename="DigitadorMain.cpp" />
 		<Unit filename="DigitadorMain.h" />
-		<Unit filename="love.cpp" />
-		<Unit filename="love.h" />
 		<Unit filename="mrcwin.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="wxsmith/Digitadorframe.wxs" />
-		<Unit filename="wxsmith/love.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="DigitadorApp.cpp" main="DigitadorFrame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/Digitadorframe.wxs" src="DigitadorMain.cpp" hdr="DigitadorMain.h" fwddecl="0" i18n="1" name="DigitadorFrame" language="CPP" />
-					<wxPanel wxs="wxsmith/love.wxs" src="love.cpp" hdr="love.h" fwddecl="0" i18n="1" name="love" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

@@ -6,12 +6,10 @@
 		<id_arg>0</id_arg>
 		<style>wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX</style>
 		<handler function="OnClose" entry="EVT_CLOSE" />
-		<handler function="OnKeyUp" entry="EVT_KEY_UP" />
 		<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
 			<pos>144,280</pos>
 			<size>532,424</size>
 			<handler function="OnPanel1Paint" entry="EVT_PAINT" />
-			<handler function="OnPanel1KeyUp" entry="EVT_KEY_UP" />
 			<object class="wxRichTextCtrl" name="ID_RICHTEXTCTRL1" variable="RichTextCtrl1" member="yes">
 				<font>
 					<size>16</size>
@@ -23,8 +21,6 @@
 				</font>
 				<pos>24,72</pos>
 				<size>480,232</size>
-				<handler function="OnRichTextCtrl1TextEnter" entry="EVT_TEXT_ENTER" />
-				<handler function="OnRichTextCtrl1RichTextContentInserted" entry="EVT_RICHTEXT_CONTENT_INSERTED" />
 			</object>
 			<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
 				<label>Iniciar</label>
@@ -81,9 +77,9 @@
 				<size>460,2</size>
 			</object>
 			<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
-				<label>bymarcosoftware@outlook.com</label>
-				<pos>320,376</pos>
-				<fg>wxSYS_COLOUR_APPWORKSPACE</fg>
+				<label>https://github.com/marcoaurelima</label>
+				<pos>304,376</pos>
+				<fg>wxSYS_COLOUR_HIGHLIGHT</fg>
 			</object>
 			<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
 				<label>v1.5</label>
@@ -96,8 +92,8 @@
 			</object>
 			<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
 				<label>Limpar</label>
-				<pos>448,48</pos>
-				<size>56,20</size>
+				<pos>448,44</pos>
+				<size>56,24</size>
 				<handler function="OnButton2Click1" entry="EVT_BUTTON" />
 			</object>
 			<object class="wxGauge" name="ID_GAUGE1" variable="Gauge1" member="yes">
